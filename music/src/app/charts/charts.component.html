@@ -1,0 +1,28 @@
+<div *ngIf="!loading" class="chart_container">
+
+    <div>
+        <h1>Scatter plot for danceability</h1>
+        <ngx-charts-bubble-chart [view]="view" [scheme]="colorScheme" [results]="parsedDataDanceability" [xAxis]="xAxis"
+            [yAxis]="yAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [timeline]="timeline"
+            [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabelInd" [yAxisLabel]="yAxisLabelDance">
+        </ngx-charts-bubble-chart>
+    </div>
+
+
+    <div>
+        <h1>Bar chat representation of Accoustics</h1>
+        <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabelInd"
+            [yAxisLabel]="yAxisLabelAcc" [timeline]="timeline" [results]="parsedDataAcc">
+        </ngx-charts-bar-vertical>
+    </div>
+
+    <div>
+        <h1>Bar chat representation of Tempo</h1>
+        <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" [xAxisLabel]="xAxisLabelInd"
+            [yAxisLabel]="yAxisLabeTempo" [timeline]="timeline" [results]="parsedDataTempo">
+        </ngx-charts-bar-vertical>
+    </div>
+
+</div>

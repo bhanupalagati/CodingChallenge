@@ -1,0 +1,26 @@
+.song-card-container {
+    margin: 30px;
+    box-shadow: 10px 20px 5px grey;
+    &__input {
+        padding-top: 30px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        input {
+            margin-right: 30px;
+        }
+    }
+    &__flex-row-container {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+        &__flex-row-item {
+            flex: 1 1 30%;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+}

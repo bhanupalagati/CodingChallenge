@@ -1,0 +1,34 @@
+<div class="song-card-container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Search Song</mat-card-title>
+            <mat-card-subtitle>Find information about your favorite song with title</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="song-card-container__input">
+                <input type="text" [(ngModel)]="search" name="name">
+                <button mat-raised-button color="primary" (click)="searchSong()" [disabled]="!search"> Search </button>
+            </div>
+            <div class="song-card-container__flex-row-container" *ngIf="!error && song">
+                <div class="song-card-container__flex-row-container__flex-row-item"> id: {{ song.id }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> title: {{ song.title }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> danceability: {{ song.danceability }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> energy: {{ song.energy }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> key: {{ song.key }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> loudness: {{ song.loudness }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> mode: {{ song.mode }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> acousticness: {{ song.acousticness }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> instrumentalness: {{ song.instrumentalness }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> liveness: {{ song.liveness }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> valence: {{ song.valence }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> tempo: {{ song.tempo }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> duration_ms: {{ song.duration_ms }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> time_signature: {{ song.time_signature }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> num_bars: {{ song.num_bars }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> num_sections: {{ song.num_sections }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> num_segments: {{ song.num_segments }} </div>
+                <div class="song-card-container__flex-row-container__flex-row-item"> class: {{ song.class }} </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

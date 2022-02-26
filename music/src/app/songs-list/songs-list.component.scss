@@ -1,0 +1,8 @@
+.songs-list-container {
+    padding: 30px;
+}
+ngb-rating {
+    color: gold;
+    font-size: 30px;
+}
+:host{ ::ng-deep{ .sr-only{display:none;}}}
