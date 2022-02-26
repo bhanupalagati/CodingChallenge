@@ -51,7 +51,7 @@ Amazing now you have a working demo. I guess you are happy with what you see on 
 1.3.7 Implemented rating functionality in UI but not connected to backend.\
 1.3.8 Implemented scatter plot\
 1.3.9 Not Implemented\
-1.3.10 Implemented bar chart for acoustics and tempo valu
+1.3.10 Implemented bar chart for acoustics and tempo value\
 1.3.11 **Bonus** Unit Testcases
 
 
