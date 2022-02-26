@@ -1,31 +1,18 @@
 <div class="songs-list-container">
-  <ngx-datatable *ngIf="songsResp"
-        class="bootstrap"
-        [rows]="songsResp.results"
-        columnMode="force"
-        [headerHeight]="50"
-        [footerHeight]="50"
-        rowHeight="auto"
-        [externalPaging]="true"
-        [count]="songsResp.count"
-        [offset]="offset"
-        [limit]="size"
-        [scrollbarH]="true"
-        (page)="setPage($event)"
-      >
+  <div *ngIf="songsResp">
+    <button mat-raised-button color="primary"><a  csvLink [data]="songsResp.results">Export to CSV</a></button>
+    <ngx-datatable  class="bootstrap" [rows]="songsResp.results" columnMode="force" [headerHeight]="50"
+      [footerHeight]="50" rowHeight="auto" [externalPaging]="true" [count]="songsResp.count" [offset]="offset"
+      [limit]="size" [scrollbarH]="true" (page)="setPage($event)">
       <ngx-datatable-column name="Index" [width]="80" prop="index"></ngx-datatable-column>
       <ngx-datatable-column name="Id" [width]="200" prop="id"></ngx-datatable-column>
       <ngx-datatable-column name="Title" [width]="200" prop="title"></ngx-datatable-column>
       <ngx-datatable-column name="Danceability" [width]="100" prop="danceability"></ngx-datatable-column>
       <ngx-datatable-column name="Rating" prop="rating" [width]="200">
-        <ng-template
-              ngx-datatable-cell-template
-              let-value="value"
-              let-isSelected="isSelected"
-              let-onCheckboxChangeFn="onCheckboxChangeFn"
-            >
-            <ngb-rating max="5" [rate]="value"></ngb-rating>
-            </ng-template>
+        <ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected"
+          let-onCheckboxChangeFn="onCheckboxChangeFn">
+          <ngb-rating max="5" [rate]="value"></ngb-rating>
+        </ng-template>
       </ngx-datatable-column>
       <ngx-datatable-column name="Energy" [width]="80" prop="energy"></ngx-datatable-column>
       <ngx-datatable-column name="Mode" [width]="80" prop="mode"></ngx-datatable-column>
@@ -34,13 +21,6 @@
       <ngx-datatable-column name="Duration_ms" [width]="100" prop="duration_ms"></ngx-datatable-column>
       <ngx-datatable-column name="Num_sections" [width]="120" prop="num_sections"></ngx-datatable-column>
       <ngx-datatable-column name="Num_segments" [width]="120" prop="num_segments"></ngx-datatable-column>
-  </ngx-datatable>
-  
-
-
-
-
-
-
-
+    </ngx-datatable>
+  </div>
 </div>

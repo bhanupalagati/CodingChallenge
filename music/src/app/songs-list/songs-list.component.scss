@@ -5,4 +5,8 @@ ngb-rating {
     color: gold;
     font-size: 30px;
 }
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
 :host{ ::ng-deep{ .sr-only{display:none;}}}

@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CsvModule } from '@ctrl/ngx-csv';
 
 const materialImports = [
   MatButtonModule,
@@ -38,6 +39,7 @@ const materialImports = [
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    CsvModule
   ],
   providers: [],
   bootstrap: [AppComponent]
