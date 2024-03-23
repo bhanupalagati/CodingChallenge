@@ -1,5 +1,5 @@
-# VivproCodingChallenge
-This repository holds the code for Vivpro Coding Challenge
+# CodingChallenge
+This repository holds the code for Coding Challenge
 
 
 ## 1. Project Structure and Languages Used
