@@ -11,11 +11,13 @@ Clone the github repository.\
 Open backend folder and run **pip install -r requirements.txt**. This command will download all the requirements. Then run **python app.py** this will spawn the flask server.
 
 **There are two ways to run Frontend**
-1. Follow this path **VivproCodingChallenge/music/dist/music** and double click **index.html** file in that folder. This is a prod build so we need no servers here.
+1. Follow this path **CodingChallenge/music/dist/music** and double click **index.html** file in that folder. This is a prod build so we need no servers here. (Follow this to test)
+
 2. Firstly, install the nodejs from https://nodejs.org/en/ . Then open music directory from the repo and run **npm i** this will install all the packages required for running the application. Then run **npm start** or **ng serve** this will spawn a development angular server in watch mode. This way of running things only helps you if you want to make changes in the code and see how the app behaves.
 
 Amazing now you have a working demo. I guess you are happy with what you see on screen.
 
+--------------------------------------------------------------------------------------------------------------------------
 ## 3. Backend Process:
 1. We started with preprocessing the json data and developed a song object out of each key. Run **python preprocessData.py** to perform the preprocessing stage again.
 2. Then the data is again dumped in a json file.
